@@ -1,5 +1,5 @@
 context:
-  version: "0.9.4"
+  version: "0.9.5"
   python_min: "3.12"
 
 package:
@@ -8,18 +8,18 @@ package:
 
 source:
   url: https://pypi.org/packages/source/m/mvlogics/mvlogics-${{ version }}.tar.gz
-  sha256: 3b30673bd21f37274c7684fd520001a0362da09a0f51abd7f6ea79e2e59424cd
+  sha256: 7d8ec7f26be6305b130006aa9696cc8b630b21ce1547ff85421ba02e9eee6111
 
 build:
-  script: python -m pip install . --no-deps --ignore-installed -vv
+  script:
+    - uv pip install --python ${{ PYTHON }} --no-deps -vv .
   number: 0
   noarch: python
 
 requirements:
   host:
     - python ${{ python_min }}.*
-    - pip
-    - setuptools
+    - uv
   run:
     - python >=${{ python_min }}
 
