@@ -1,5 +1,5 @@
 context:
-  version: "1.0.5"
+  version: "1.0.6"
   python_min: "3.12"
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/m/mvlogics/mvlogics-${{ version }}.tar.gz
-  sha256: 406d0431aa20d150b29212a47863216c0c48965ef4f8f6b1548b4a5b02de3f5f
+  sha256: f5296eb853ce9049705aadc4d2f0dd0c9c635aeec64d51fc477c6228f7bd2071
 
 build:
   script:
